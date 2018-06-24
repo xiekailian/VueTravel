@@ -73,15 +73,15 @@
     },
     computed: {
       pages () {
-        const pages = [];
-        this.iconList.forEach((item,index)=>{
-          const page = Math.floor(index/8);
-          if (!pages[page]){
-            pages[page] = [];
+        const pages = []
+        this.iconList.forEach((item, index) => {
+          const page = Math.floor(index / 8)
+          if (!pages[page]) {
+            pages[page] = []
           }
-          pages[page].push(item);
-        });
-        return pages;
+          pages[page].push(item)
+        })
+        return pages
       }
     }
 
@@ -100,6 +100,7 @@
     padding-bottom: 50%
 
   .icons
+    margin-top: .1rem
     overflow: hidden
     width: 100%
     height: 0
@@ -132,7 +133,7 @@
         line-height: .44rem
         text-align: center
         color: $darkTextColor
-        //以下设计文字溢出时的样式
+//        以下设计文字溢出时的样式
         ellipse()
 
 </style>
