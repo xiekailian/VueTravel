@@ -19,27 +19,9 @@
 <script>
   export default {
     name: 'HomeRecommend',
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/a3/a37ced8252b273c9.img.jpg_150x150_8eea713b.jpg',
-          title: '夫子庙秦淮河游船',
-          desc: '夜泊秦淮近酒家，桨声灯影里的秦淮河'
-        }, {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201305/22/273c38aa938ad97dc8d65eac.jpg_150x150_964040ab.jpg',
-          title: '夫子庙秦淮河游船',
-          desc: '夜泊秦淮近酒家，桨声灯影里的秦淮河'
-        }, {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1512/95/9579bcb3e5a206cc90.water.jpg_150x150_2b0229bc.jpg',
-          title: '夫子庙秦淮河游船',
-          desc: '夜泊秦淮近酒家，桨声灯影里的秦淮河'
-        }]
-      }
+    props: {
+      recommendList: Array
     }
-
   }
 </script>
 

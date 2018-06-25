@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img"
                :src="item.imgUrl"/>
@@ -20,27 +20,9 @@
 <script>
   export default {
     name: 'HomeWeekend',
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/f1/ae9d4299b8aaea.jpg_r_640x214_0c555905.jpg',
-          title: '南京必游TOP10',
-          desc: '看尽王侯将相荣辱成败，六朝金粉潮起潮落'
-        }, {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/f3/d51669250308cc.jpg_r_640x214_7a127cd0.jpg',
-          title: '秦淮金粉里的南京',
-          desc: '六朝金粉，处处诉说着南京的历史'
-        }, {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/ed/8bce72632c9136.jpg_r_640x214_221c04c6.jpg',
-          title: '孩子的游玩地',
-          desc: '让小朋友们欢脱起来'
-        }]
-      }
+    props: {
+      weekendList: Array
     }
-
   }
 </script>
 
@@ -54,9 +36,10 @@
   .item-img-wrapper
     overflow: hidden
     height: 0
-    padding-bottom: 33.9%
+    padding-bottom: 37.09%
     .item-img
       width: 100%
+
   .item-info
     padding: .1rem
     .item-title
